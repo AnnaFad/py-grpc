@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service FolderService {
+  rpc ListFiles (FolderRequest) returns (FolderResponse);
+}
+
+message FolderRequest {
+  string path = 1;
+}
+
+message FolderResponse {
+  repeated string filenames = 1;
+}
